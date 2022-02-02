@@ -7,7 +7,7 @@ input_files = glob.glob(os.path.join(path, '*.in'))
 for name in input_files:
     solution_path = os.path.join(path, 'solution.py')
     print(f'running {name}...', end=' ')
-    os.system(f'python3 {solution_path} {name}')
+    os.system(f'python {solution_path} {name}')
     test_file = name[:-2] + 'test'
     with open(test_file, 'r') as f:
         test_lines = f.readlines()
